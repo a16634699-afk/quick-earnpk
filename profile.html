@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw Earnings - QuickEarn PK</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">??</div>
+                <h2>QuickEarn PK</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="questions.html" class="nav-link">Earn Money</a>
+                <a href="profile.html" class="nav-link active">Withdraw</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="profile-section">
+            <!-- Balance Card -->
+            <div class="balance-card">
+                <h1>Your Earnings</h1>
+                <div class="balance-amount" id="userBalance">0 PKR</div>
+                <p id="userName">Loading...</p>
+            </div>
+
+            <!-- Withdrawal Form -->
+            <div class="withdrawal-section">
+                <h2>?? Withdraw Your Money</h2>
+                
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select id="withdrawalMethod" class="form-input">
+                        <option value="">Select Method</option>
+                        <option value="jazzcash">JazzCash</option>
+                        <option value="easypaisa">EasyPaisa</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Account Number</label>
+                    <input type="text" id="accountNumber" placeholder="03XX-XXXXXXX" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label>Account Holder Name</label>
+                    <input type="text" id="accountName" placeholder="Your full name" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label>Amount (PKR)</label>
+                    <input type="number" id="withdrawalAmount" placeholder="Minimum 100 PKR" class="form-input" min="100">
+                </div>
+
+                <!-- Fee Calculation -->
+                <div class="fee-calculation">
+                    <p>Withdrawal Amount: <span id="showAmount">0</span> PKR</p>
+                    <p>Processing Fee (3%): <span id="showFee">0</span> PKR</p>
+                    <p class="total-amount">You Receive: <span id="showNetAmount">0</span> PKR</p>
+                </div>
+                
+                <button onclick="requestWithdrawal()" class="btn btn-primary">
+                    ?? Request Withdrawal
+                </button>
+
+                <!-- Withdrawal Info -->
+                <div class="withdrawal-info">
+                    <p>?? First withdrawal after 7 days of registration</p>
+                    <p>?? Minimum withdrawal: 100 PKR | Fee: 3%</p>
+                    <p>? Processing time: 24-48 hours</p>
+                </div>
+            </div>
+
+            <!-- Withdrawal History -->
+            <div class="history-section">
+                <h2>Withdrawal History</h2>
+                <div id="withdrawalHistory">
+                    <p>Loading your withdrawal history...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

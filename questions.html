@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer Questions - QuickEarn PK</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">??</div>
+                <h2>QuickEarn PK</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="questions.html" class="nav-link active">Earn Money</a>
+                <a href="profile.html" class="nav-link">Withdraw</a>
+                <span class="balance-badge" id="userBalance">0 PKR</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="questionContainer" class="question-container">
+            <div class="timer-container">
+                <div class="timer" id="timer">10</div>
+                <div class="timer-seconds">seconds remaining</div>
+            </div>
+            
+            <h2 id="questionText">Loading question...</h2>
+            
+            <div class="options" id="optionsContainer">
+                <!-- Options will load here -->
+            </div>
+            
+            <button onclick="submitAnswer()" id="submitBtn" disabled class="btn btn-primary">
+                Submit Answer
+            </button>
+
+            <div class="progress-text">
+                Question <span id="currentQ">1</span> of 20 | 
+                Earned: <span id="earnedSoFar">0</span> PKR
+            </div>
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="questions.js"></script>
+</body>
+</html>

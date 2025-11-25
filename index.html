@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickEarn PK - Earn 1000 PKR Daily</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">??</div>
+                <h2>QuickEarn PK</h2>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="questions.html" class="nav-link">Earn Money</a>
+                <a href="profile.html" class="nav-link">Withdraw</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">?? Earn Real Money</div>
+                <h1 class="hero-title">Earn <span class="gradient-text">1000 PKR</span> Daily</h1>
+                <p class="hero-subtitle">Answer Simple Questions • Watch Ads • Withdraw Instantly</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">??</div>
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">PKR Daily</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">??</div>
+                        <div class="stat-number">10s</div>
+                        <div class="stat-label">Per Question</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">??</div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Payment Methods</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">??</div>
+                        <div class="stat-number">Instant</div>
+                        <div class="stat-label">Withdrawal</div>
+                    </div>
+                </div>
+
+                <div class="signup-box">
+                    <h3>Start Earning Today! ??</h3>
+                    <div class="form-group">
+                        <input type="text" id="firstName" placeholder="First Name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lastName" placeholder="Last Name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="Password" class="form-input">
+                    </div>
+                    <button onclick="signUp()" class="btn btn-primary">?? Start Earning Free</button>
+                    <button onclick="login()" class="btn btn-secondary">?? Login to Account</button>
+                    <p class="terms-text">By signing up, you agree to our Terms & Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
